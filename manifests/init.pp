@@ -2,7 +2,7 @@ class postgrey(
   $enable = true,
   $start = true,
   $default_whitelist_clients = true,
-  $whitelist_clients = []
+  $whitelist_clients = [],
   $default_whitelist_recipients = true,
   $whitelist_recipients = []
 ) {
