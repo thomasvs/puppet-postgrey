@@ -1,4 +1,9 @@
 class postgrey::config() {
+  file {
+    '/etc/default/postgrey':
+      content => template('postgrey/default.erb');
+  }
+
   concat {
     '/etc/postgrey/whitelist_clients':
   }
