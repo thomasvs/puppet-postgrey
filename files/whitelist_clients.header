@@ -1,0 +1,7 @@
+# postgrey whitelist for mail client hostnames
+# --------------------------------------------
+# put this file in /etc/postgrey or specify its path
+# with --whitelist-clients=xxx
+
+# WARNING - This file is managed by puppet, do not edit manually!
+
