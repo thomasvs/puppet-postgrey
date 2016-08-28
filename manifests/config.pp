@@ -5,7 +5,10 @@ class postgrey::config() {
   }
 
   concat {
-    '/etc/postgrey/whitelist_clients':
+   '/etc/postgrey/whitelist_clients':
+     require => [
+       File['/etc/postgrey'],
+     ]
   }
 
   concat::fragment { 'postgrey/whitelist_clients/header':
