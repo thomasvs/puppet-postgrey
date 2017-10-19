@@ -30,7 +30,7 @@ class postgrey::config() {
   concat::fragment { 'postgrey/whitelist_clients':
     target  => $postgrey::params::whitelist_clients_local,
     order   => 15,
-    content => inline_template('<%= scope.lookupvar("postgrey::whitelist_clients").join("\n") %>')
+    content => inline_template('<%= scope.lookupvar("postgrey::whitelist_clients").join("\n") + "\n" %>')
   }
 
   concat { [
@@ -56,7 +56,7 @@ class postgrey::config() {
   concat::fragment { 'postgrey/whitelist_recipients':
     target  => $postgrey::params::whitelist_recipients_local,
     order   => 15,
-    content => inline_template('<%= scope.lookupvar("postgrey::whitelist_recipients").join("\n") %>')
+    content => inline_template('<%= scope.lookupvar("postgrey::whitelist_recipients").join("\n") + "\n" %>')
   }
 }
 
